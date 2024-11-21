@@ -1,0 +1,130 @@
+#navbar {
+  background-color: #6c5aaf;
+  width: 20%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: aliceblue;
+  transition-duration: 200ms;
+}
+
+.nav-head {
+  height: 5%;
+}
+
+.logo {
+  margin: 30px 0 0 15px;
+}
+
+.nav-body {
+  padding: 15px 12px 15px 0;
+  height: 70%;
+  z-index: 2;
+}
+
+.nav-body > a {
+  display: block;
+  padding: 10px 12px 10px 10px;
+  font-size: 1rem;
+  margin: 5px 0;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-body > a:hover {
+  background-color: aliceblue;
+  color: #201f24;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px 15px 10px 20px;
+  font-size: 1.2rem;
+  animation: selectedLink;
+  animation-duration: 200ms;
+}
+
+@keyframes selectedLink {
+  0% {
+    font-size: 1rem;
+    padding: 10px 12px 10px 10px;
+  }
+  50% {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
+  100% {
+    font-size: 1.2rem;
+    padding: 10px 12px 10px 20px;
+  }
+}
+
+.nav-footer {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 12px 15px 0;
+}
+
+.nav-footer > button {
+  display: block;
+  padding: 15px 12px 15px 10px;
+  font-size: 1.1rem;
+  width: 75%;
+  text-align: left;
+  color: aliceblue;
+  background-color: #6c5aaf;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  transition-duration: 200ms;
+}
+
+.nav-footer > button:hover {
+  background-color: aliceblue;
+  color: #201f24;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 12px 15px 20px;
+  animation: selectedFooterOption;
+  animation-duration: 200ms;
+}
+
+@keyframes selectedFooterOption {
+  0% {
+    width: 75%;
+    padding: 15px 12px 15px 10px;
+  }
+  50% {
+    width: 87%;
+    text-align: center;
+    padding: 15px 12px 15px 15px;
+  }
+  100% {
+    width: 100%;
+    padding: 15px 12px 15px 20px;
+  }
+}
+
+#minimize-nav {
+  background-color: #6c5aaf;
+  width: 2%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: aliceblue;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+#minimize-nav:hover {
+  width: 4%;
+  transition-duration: 200ms;
+}
+
+#minimize-nav > .nav-body,
+#minimize-nav > .nav-footer,
+#minimize > .nav-head,
+#minimize-nav > .nav-head > .logo {
+  display: none;
+}
